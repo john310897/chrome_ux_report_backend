@@ -13,4 +13,4 @@ def getDefaultConfigs():
 def getPageUXReport():
     return ChromeUXReportService.getPageUXReport()
 
-app.run()
+app.run(port=5000)
