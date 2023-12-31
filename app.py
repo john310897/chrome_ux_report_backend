@@ -5,6 +5,10 @@ from src.services.ChromeUXReportService import *
 app=Flask(__name__)
 CORS(app,methods=['GET','POST'])
 
+@app.route('/',methods=['GET'])
+def backendCheck():
+    return jsonify("Backend works")
+
 @app.route('/get-defaults',methods=['GET'])
 def getDefaultConfigs():
     return ChromeUXReportService.getDefaultConfigs()
@@ -13,4 +17,4 @@ def getDefaultConfigs():
 def getPageUXReport():
     return ChromeUXReportService.getPageUXReport()
 
-app.run(host='localhost',debug=True)
+app.run()
