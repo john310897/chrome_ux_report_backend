@@ -13,4 +13,4 @@ def getDefaultConfigs():
 def getPageUXReport():
     return ChromeUXReportService.getPageUXReport()
 
-app.run(host='localhost',debug=True)
+app.run()
